@@ -16,4 +16,4 @@ rm -rf "${HOME}/bin/chromedriver"
 wget --continue --output-document "${CACHED_DOWNLOAD}" "http://chromedriver.storage.googleapis.com/${CHROMEDRIVER_VERSION}/chromedriver_linux64.zip"
 unzip -o "${CACHED_DOWNLOAD}" -d "${HOME}/bin"
 
-chromedriver --version | grep "${CHROMEDRIVER_VERSION}"
+chromedriver --headless --version | grep "${CHROMEDRIVER_VERSION}"
